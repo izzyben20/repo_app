@@ -225,6 +225,11 @@ export const SearchNButtonBox = styled.div`
   /* gap: 15px; */
   padding-bottom: 2rem;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+  }
 `;
 
 export const SearchBox = styled(Input)`
