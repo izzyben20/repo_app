@@ -48,7 +48,7 @@ import {
   Section,
   Box,
   Spinner,
-  Active
+  Active,
 } from './ProfilePageStyles';
 
 const ProfilePage = () => {
@@ -77,6 +77,7 @@ const ProfilePage = () => {
     dispatch(getRepos());
   }, [dispatch]);
 
+  // render if loading is true
   if (loading) {
     return (
       <Spinner>
@@ -85,6 +86,7 @@ const ProfilePage = () => {
     );
   }
 
+  // render if err is true
   if (err) {
     return (
       <Spinner>
@@ -124,13 +126,13 @@ const ProfilePage = () => {
             </HeaderLink>
           </div>
           <Active>
-          <div>
-            <HeaderLink active>
-              <RiGitRepositoryLine size="1.8rem" />
-              Repositories
-              <span>{repos.length}</span>
-            </HeaderLink>
-          </div>
+            <div>
+              <HeaderLink active>
+                <RiGitRepositoryLine size="1.8rem" />
+                Repositories
+                <span>{repos.length}</span>
+              </HeaderLink>
+            </div>
           </Active>
           <div>
             <HeaderLink>
@@ -156,7 +158,6 @@ const ProfilePage = () => {
 
       {/* Main Section */}
       <MainSection>
-
         {/* Aside layout */}
         <SideBar>
           <Img src={profile} alt="profile-img" />
@@ -188,7 +189,6 @@ const ProfilePage = () => {
 
         {/* Main layout */}
         <Main>
-
           {/* Search Input and Buttons */}
           <SearchNButtonBox>
             <SearchBox
@@ -233,7 +233,9 @@ const ProfilePage = () => {
                   <RepoContainer>
                     <div>
                       <Title>{name}</Title>
-                      <Public>{visibility[0].toUpperCase() + visibility.slice(1)}</Public>
+                      <Public>
+                        {visibility[0].toUpperCase() + visibility.slice(1)}
+                      </Public>
                     </div>
                     <ButtonGroup>
                       <Button2>
