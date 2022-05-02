@@ -7,7 +7,10 @@ import './App.css';
 const App = () => {
   const [user] = useAuthState(auth);
 
-  return <>{user ? <ProfilePage /> : <Login /> }</>;
+  return (
+    // Conditional rendering based on users login status
+    <>{user ? <ProfilePage /> : <Login />}</>
+  );
 };
 
 export default App;
