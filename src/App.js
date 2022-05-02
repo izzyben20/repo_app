@@ -8,7 +8,7 @@ const App = () => {
   const [user] = useAuthState(auth);
 
   return (
-    // Conditional rendering based on users login status
+    // Conditional rendering based on user's login status
     <>{user ? <ProfilePage /> : <Login />}</>
   );
 };
