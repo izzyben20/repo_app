@@ -134,6 +134,11 @@ padding-bottom: -15px;
 
 export const MainSection = styled.section`
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const SideBar = styled.aside`
@@ -168,6 +173,11 @@ export const Img = styled.img`
   width: 300px;
   margin-top: -20px;
   z-index: 4;
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem 2rem;
+    margin-top: 2px;
+  }
 `;
 
 export const EditProfileButton = styled.button`
