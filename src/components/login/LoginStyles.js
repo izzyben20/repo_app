@@ -85,7 +85,7 @@ export const Form = styled.form`
     border-radius: 4px;
     color: #fff;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
     animation: all 0.2s ease-in;
 
