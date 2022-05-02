@@ -56,6 +56,7 @@ const ProfilePage = () => {
   const { repos, loading, err } = useSelector((state) => state.repo);
   const [searchText, setSearchText] = useState('');
 
+  //Debounce function to prevent multiple network request
   const myDebounce = (cb, delay = 1000) => {
     let timer;
     return (...args) => {
@@ -66,10 +67,12 @@ const ProfilePage = () => {
     };
   };
 
+  // onChange handler with debounce function
   const handleChange = myDebounce((e) => {
     setSearchText(e.target.value);
   }, 1000);
 
+  //fetch our repos data upon component mounting
   useEffect(() => {
     dispatch(getRepos());
   }, [dispatch]);
@@ -92,6 +95,7 @@ const ProfilePage = () => {
 
   return (
     <Container>
+      {/* NavBar */}
       <Nav>
         <Div1>
           <div>
@@ -109,6 +113,8 @@ const ProfilePage = () => {
           <Button onClick={logout}>Sign-Out</Button>
         </Div2>
       </Nav>
+
+      {/* Header */}
       <Header>
         <HeaderLinksContainer>
           <div>
@@ -147,7 +153,11 @@ const ProfilePage = () => {
           </div>
         </HeaderLinksContainer>
       </Header>
+
+      {/* Main Section */}
       <MainSection>
+
+        {/* Aside layout */}
         <SideBar>
           <Img src={profile} alt="profile-img" />
           <div>
@@ -175,7 +185,11 @@ const ProfilePage = () => {
             </div>
           </InfoContainer>
         </SideBar>
+
+        {/* Main layout */}
         <Main>
+
+          {/* Search Input and Buttons */}
           <SearchNButtonBox>
             <SearchBox
               type="text"
@@ -197,6 +211,8 @@ const ProfilePage = () => {
               </NewRepoButton>
             </ButtonContainer>
           </SearchNButtonBox>
+
+          {/* Lists of Repositories */}
           {repos
             .filter((item) => {
               if (searchText === '') {
