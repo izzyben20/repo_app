@@ -1,14 +1,23 @@
 {
-  "name": "new-app",
+  "name": "github-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "firebase": "^9.7.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-firebase-hooks": "^5.0.3",
+    "react-icons": "^4.3.1",
+    "react-redux": "^7.2.8",
+    "react-router": "^6.3.0",
     "react-scripts": "5.0.0",
+    "spinners-react": "^1.0.7",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +43,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
