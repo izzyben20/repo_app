@@ -9,6 +9,7 @@ import {
 } from 'react-icons/ai';
 import { RiGitRepositoryLine } from 'react-icons/ri';
 import { BsPeople, BsCircleFill } from 'react-icons/bs';
+import { BiLink } from 'react-icons/bi';
 import { GoLocation } from 'react-icons/go';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { SpinnerCircularFixed } from 'spinners-react';
@@ -179,7 +180,7 @@ const ProfilePage = () => {
               <GoLocation size="1.5rem" /> Lagos, Nigeria
             </div>
             <div>
-              <GoLocation size="1.5rem" /> isaacoyedele.netlify.app
+              <BiLink size="1.5rem" /> isaacoyedele.netlify.app
             </div>
             <div>
               <AiOutlineTwitter size="1.5rem" /> @izzyben0
